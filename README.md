@@ -1,6 +1,6 @@
 # Weather Backend
 
-![Python](https://img.shields.io/badge/Python-3.11-blue) ![Flask](https://img.shields.io/badge/Flask-API-black) ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED) 
+![Python](https://img.shields.io/badge/Python-3.11-blue) ![Flask](https://img.shields.io/badge/Flask-API-black) ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED)
 
 This backend service provides current weather data for four locations: New York, Sydney, Cape Town, and Bangkok. It is built with Flask and uses the OpenWeatherMap API to fetch live weather data.
 
@@ -32,6 +32,7 @@ Create a `.env` file in the project root and add your API key:
     GET /weather/<location_key>
 
 Supported location keys:
+
 - `newyork`
 - `sydney`
 - `capetown`
@@ -49,6 +50,12 @@ Example JSON response:
       "humidity": 38,
       "wind_speed": 10.8
     }
+## Curl Examples
+
+    curl http://127.0.0.1:5000/weather/newyork
+    curl http://127.0.0.1:5000/weather/sydney
+    curl http://127.0.0.1:5000/weather/capetown
+    curl http://127.0.0.1:5000/weather/bangkok
 
 ## Run with Docker
 
